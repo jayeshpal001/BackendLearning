@@ -16,8 +16,8 @@ exports.searchUser = (req, res) => {
 }
 exports.createUser = async (req, res) => {
     try {
-        const { name, email } = req.body;
-        const newUser = await User.create({ name, email });
+        const { name, email, password } = req.body;
+        const newUser = await User.create({ name, email, password });
         res.status(201).json({
             message: "User created successfully",
             user: newUser
@@ -25,6 +25,8 @@ exports.createUser = async (req, res) => {
         // res.send(`The user name is ${name} and Email is ${email}`);  
     } catch (error) {
         res.status(400).json({ error: error.message });
+        console.log(error.message);
+        
     }
 }
 exports.updateUser = async (req, res) => {
