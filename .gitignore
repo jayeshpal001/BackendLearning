@@ -1,0 +1,20 @@
+# Ignore build artifacts
+/dist/
+/build/
+*.o
+*.class
+
+# Ignore log files
+*.log
+npm-debug.log*
+
+# Ignore node_modules
+/node_modules/
+
+# Ignore .env file (but not the directory)
+!.env/
+.env
+
+# Ignore temporary files
+*.swp
+*.tmp
