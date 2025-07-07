@@ -17,4 +17,4 @@ npm-debug.log*
 
 # Ignore temporary files
 *.swp
-*.tmp
+*.tmpnode_modules/
